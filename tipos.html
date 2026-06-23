@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+    Portal Alerta Digital - Tipos de Fake News
+    Apresenta as principais categorias de desinformação
+-->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Fake News — Alerta Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="status-bar">
+        <span class="status-dot"></span>
+        <span class="status-text">SISTEMA ATIVO</span>
+        <span class="status-divider">//</span>
+        <span class="status-text" id="current-date"></span>
+        <span class="status-divider">//</span>
+        <span class="status-text">SEÇÃO 02 / TIPOS</span>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">⚠</span>
+                <span class="logo-text">
+                    <span class="logo-title">Alerta Digital</span>
+                    <span class="logo-sub">portal contra fake news</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tipos.html" class="nav-link active">Tipos</a>
+                <a href="identificar.html" class="nav-link">Como Identificar</a>
+                <a href="exemplos.html" class="nav-link">Exemplos</a>
+                <a href="ia.html" class="nav-link">IA</a>
+                <a href="quiz.html" class="nav-link nav-cta">Quiz</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-meta">
+                <span class="page-num">02</span>
+                <span class="page-eyebrow">CATÁLOGO</span>
+            </div>
+            <h1 class="page-title">
+                Os <em>5 tipos</em> de<br>
+                fake news que você<br>
+                vai encontrar.
+            </h1>
+            <p class="page-lead">
+                Nem toda mentira é igual. Algumas são totalmente inventadas, outras só
+                distorcem um detalhe. Entender as categorias é o primeiro passo para
+                não cair em nenhuma delas.
+            </p>
+
+            <!-- Filtro -->
+            <div class="filter-bar" role="tablist" aria-label="Filtrar tipos de fake news">
+                <span class="filter-label">FILTRAR:</span>
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="texto">Texto</button>
+                <button class="filter-btn" data-filter="visual">Visual</button>
+                <button class="filter-btn" data-filter="contexto">Contexto</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tipos -->
+    <section class="section section-types">
+        <div class="container">
+            <div class="types-grid" id="typesGrid">
+
+                <!-- Tipo 01 -->
+                <article class="type-card" data-category="texto">
+                    <div class="type-header">
+                        <span class="type-num">01</span>
+                        <span class="type-tag">TEXTO</span>
+                        <span class="type-severity" data-level="5" title="Nível de perigo: 5/5">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </span>
+                    </div>
+                    <h2 class="type-title">Notícia Completamente <em>Falsa</em></h2>
+                    <p class="type-desc">
+                        Aquela notícia que <strong>foi inventada do zero</strong>. Não tem fonte
+                        verdadeira, não saiu em nenhum jornal sério, e geralmente é criada para
+                        viralizar e gerar cliques ou confusão.
+                    </p>
+                    <div class="type-example">
+                        <span class="example-label">EXEMPLO TÍPICO</span>
+                        <p>"Cientistas descobrem que beber café com limão cura câncer em 7 dias."</p>
+                        <span class="example-tag">⚠ Não existe nenhum estudo. Inventado.</span>
+                    </div>
+
+                    <!-- Botão Adicionado Aqui -->
+                    <div class="type-actions">
+                        <a href="tipo01.html" class="btn-more">Saiba mais</a>
+                    </div>
+                </article>
+
+                <!-- Tipo 02 -->
+                <article class="type-card" data-category="texto">
+                    <div class="type-header">
+                        <span class="type-num">02</span>
+                        <span class="type-tag">TEXTO</span>
+                        <span class="type-severity" data-level="4" title="Nível de perigo: 4/5">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </span>
+                    </div>
+                    <h2 class="type-title">Conteúdo <em>Enganoso</em></h2>
+                    <p class="type-desc">
+                        Tem um <strong>fundo de verdade</strong>, mas a notícia é apresentada de
+                        forma distorcida para passar uma mensagem diferente da realidade. É a mentira
+                        mais difícil de identificar.
+                    </p>
+                    <div class="type-example">
+                        <span class="example-label">EXEMPLO TÍPICO</span>
+                        <p>"Estudo prova que vitamina X aumenta a imunidade." (Quando o estudo
+                            foi feito com 10 pessoas e não foi revisado.)</p>
+                        <span class="example-tag">⚠ Existe estudo, mas não comprova o que diz.</span>
+                    </div>
+                    <!-- Botão Adicionado Aqui -->
+                    <div class="type-actions">
+                        <a href="tipo02.html" class="btn-more">Saiba mais</a>
+                    </div>
+                </article>
+
+                <!-- Tipo 03 -->
+                <article class="type-card" data-category="texto">
+                    <div class="type-header">
+                        <span class="type-num">03</span>
+                        <span class="type-tag">TEXTO</span>
+                        <span class="type-severity" data-level="3" title="Nível de perigo: 3/5">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </span>
+                    </div>
+                    <h2 class="type-title">Títulos Sensacionalistas <em>(Clickbait)</em></h2>
+                    <p class="type-desc">
+                        O famoso <strong>"isca de cliques"</strong>. O título promete uma bomba e
+                        o conteúdo entrega muito menos. Não é mentira completa, mas explora a
+                        curiosidade e exagera para você clicar.
+                    </p>
+                    <div class="type-example">
+                        <span class="example-label">EXEMPLO TÍPICO</span>
+                        <p>"Você NÃO VAI ACREDITAR no que aconteceu com este ator! O #5 vai
+                            chocar você!"</p>
+                        <span class="example-tag">⚠ Nunca o item #5 vai chocar ninguém.</span>
+                    </div>
+                    <!-- Botão Adicionado Aqui -->
+                    <div class="type-actions">
+                        <a href="tipo03.html" class="btn-more">Saiba mais</a>
+                    </div>
+                </article>
+
+                <!-- Tipo 04 -->
+                <article class="type-card" data-category="visual">
+                    <div class="type-header">
+                        <span class="type-num">04</span>
+                        <span class="type-tag">VISUAL</span>
+                        <span class="type-severity" data-level="5" title="Nível de perigo: 5/5">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </span>
+                    </div>
+                    <h2 class="type-title">Imagens e Vídeos <em>Manipulados</em></h2>
+                    <p class="type-desc">
+                        Fotos editadas no Photoshop, vídeos cortados em momentos estratégicos,
+                        ou os perigosos <strong>deepfakes</strong> — vídeos feitos com inteligência
+                        artificial em que pessoas dizem coisas que nunca falaram.
+                    </p>
+                    <div class="type-example">
+                        <span class="example-label">EXEMPLO TÍPICO</span>
+                        <p>Vídeo de um político dizendo algo absurdo — quando na verdade
+                            a fala foi gerada por IA ou tirada de outro contexto.</p>
+                        <span class="example-tag">⚠ Cada vez mais difícil de detectar.</span>
+                    </div>
+                    <!-- Botão Adicionado Aqui -->
+                    <div class="type-actions">
+                        <a href="tipo04.html" class="btn-more">Saiba mais</a>
+                    </div>
+                </article>
+
+                <!-- Tipo 05 -->
+                <article class="type-card" data-category="contexto">
+                    <div class="type-header">
+                        <span class="type-num">05</span>
+                        <span class="type-tag">CONTEXTO</span>
+                        <span class="type-severity" data-level="4" title="Nível de perigo: 4/5">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </span>
+                    </div>
+                    <h2 class="type-title">Desinformação <em>Fora de Contexto</em></h2>
+                    <p class="type-desc">
+                        Uma foto ou notícia <strong>verdadeira</strong>, mas usada para descrever
+                        outro evento, outro lugar ou outra época. A imagem é real — só que de
+                        2014, e estão dizendo que é de hoje.
+                    </p>
+                    <div class="type-example">
+                        <span class="example-label">EXEMPLO TÍPICO</span>
+                        <p>Foto de uma multidão de protesto na Espanha em 2010 sendo
+                            compartilhada como "manifestação acontecendo em São Paulo agora!"</p>
+                        <span class="example-tag">⚠ Foto real, contexto totalmente falso.</span>
+                    </div>
+                    <!-- Botão Adicionado Aqui -->
+                    <div class="type-actions">
+                        <a href="tipo05.html" class="btn-more">Saiba mais</a>
+                    </div>
+                </article>
+
+                <!-- Card Bônus / Resumo -->
+                <article class="type-card type-card-summary" data-category="all">
+                    <span class="summary-eyebrow">RESUMO</span>
+                    <h2 class="type-title">A regra de ouro</h2>
+                    <p class="type-desc">
+                        Não importa o tipo: toda fake news <strong>quer despertar uma emoção forte</strong>
+                        — raiva, medo, indignação. Quando uma notícia te faz sentir algo intenso,
+                        é o momento perfeito para parar, respirar e <em>verificar</em>.
+                    </p>
+                    <a href="identificar.html" class="btn btn-primary btn-card">
+                        Aprender a verificar <span class="btn-arrow">→</span>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">⚠</span>
+                <div>
+                    <strong>Alerta Digital</strong>
+                    <p>Portal educativo • Projeto escolar 2026</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="tipos.html">Tipos</a>
+                <a href="identificar.html">Como Identificar</a>
+                <a href="exemplos.html">Exemplos</a>
+                <a href="quiz.html">Quiz</a>
+            </nav>
+            <p class="footer-credit">
+                Feito com HTML, CSS e JavaScript •
+                <em>"A verdade dá trabalho, a mentira é gratuita."</em>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

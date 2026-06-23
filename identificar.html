@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--
+    Portal Alerta Digital - Como Identificar Fake News
+    Guia prático com dicas de verificação
+-->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Identificar Fake News — Alerta Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="status-bar">
+        <span class="status-dot"></span>
+        <span class="status-text">SISTEMA ATIVO</span>
+        <span class="status-divider">//</span>
+        <span class="status-text" id="current-date"></span>
+        <span class="status-divider">//</span>
+        <span class="status-text">SEÇÃO 03 / GUIA</span>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">⚠</span>
+                <span class="logo-text">
+                    <span class="logo-title">Alerta Digital</span>
+                    <span class="logo-sub">portal contra fake news</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tipos.html" class="nav-link">Tipos</a>
+                <a href="identificar.html" class="nav-link active">Como Identificar</a>
+                <a href="exemplos.html" class="nav-link">Exemplos</a>
+                <a href="ia.html" class="nav-link">IA</a>
+                <a href="quiz.html" class="nav-link nav-cta">Quiz</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-meta">
+                <span class="page-num">03</span>
+                <span class="page-eyebrow">GUIA PRÁTICO</span>
+            </div>
+            <h1 class="page-title">
+                7 perguntas que<br>
+                separam <em>fato</em><br>
+                de <em>fake</em>.
+            </h1>
+            <p class="page-lead">
+                Antes de compartilhar qualquer notícia, faça este checklist. Em menos de
+                dois minutos você consegue saber se está diante de uma informação confiável
+                — ou de mais uma fake news no caminho.
+            </p>
+        </div>
+    </section>
+
+    <!-- Verificador Simulado -->
+    <section class="section section-verifier">
+        <div class="container">
+            <div class="verifier-box">
+                <div class="verifier-header">
+                    <span class="verifier-icon">🔍</span>
+                    <div>
+                        <span class="verifier-eyebrow">FERRAMENTA EDUCATIVA</span>
+                        <h3 class="verifier-title">Simulador de Verificação</h3>
+                    </div>
+                </div>
+                <p class="verifier-desc">
+                    Cole abaixo um título de notícia (real ou suspeito) e veja uma análise
+                    educativa simulada — não é uma checagem real, apenas um exercício
+                    para treinar seu olhar crítico.
+                </p>
+                <div class="verifier-input">
+                    <input type="text" id="newsInput"
+                        placeholder="Ex: 'Cientista descobre cura milagrosa em alimento comum...'" maxlength="200">
+                    <button class="btn btn-primary" id="verifyBtn">
+                        Verificar <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+                <div class="verifier-result" id="verifierResult" hidden></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 Dicas -->
+    <section class="section section-tips">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <span class="section-eyebrow">CHECKLIST</span>
+                <h2 class="section-title">As <em>7 perguntas</em> essenciais</h2>
+            </div>
+
+            <div class="tips-list">
+
+                <div class="tip-row">
+                    <span class="tip-num">01</span>
+                    <div class="tip-content">
+                        <h3 class="tip-title">A fonte é confiável?</h3>
+                        <p class="tip-text">
+                            Procure o nome do site. É um veículo conhecido (G1, Folha, BBC,
+                            Reuters)? Ou é um domínio estranho tipo "noticiasquente.com.br"?
+                            Sites sérios têm <strong>sobre nós</strong>, equipe identificada,
+                            e não publicam só notícias bombásticas.
+                        </p>
+                        <span class="tip-action">→ Pesquise o nome do site no Google antes de acreditar</span>
+                    </div>
+                </div>
+
+                <div class="tip-row">
+                    <span class="tip-num">02</span>
+                    <div class="tip-content">
+                        <h3 class="tip-title">Quando isso aconteceu?</h3>
+                        <p class="tip-text">
+                            Notícias <strong>antigas</strong> são frequentemente recompartilhadas
+                            como se fossem atuais. Veja sempre a data da publicação. Uma matéria
+                            de 2017 sobre uma tragédia não está acontecendo agora.
+                        </p>
+                        <span class="tip-action">→ Confira a data antes de compartilhar</span>
+                    </div>
+                </div>
+
+                <div class="tip-row">
+                    <span class="tip-num">03</span>
+                    <div class="tip-content">
+                        <h3 class="tip-title">Outros sites estão noticiando?</h3>
+                        <p class="tip-text">
+                            Pesquise o assunto no Google. Se a notícia é importante de verdade,
+                            <strong>vários veículos</strong> estarão cobrindo. Se só um site
+                            obscuro fala sobre, desconfie. Furos jornalísticos existem, mas
+                            grandes acontecimentos não passam despercebidos.
+                        </p>
+                        <span class="tip-action">→ Use o Google para comparar fontes</span>
+                    </div>
+                </div>
+
+                <div class="tip-row">
+                    <span class="tip-num">04</span>
+                    <div class="tip-content">
+                        <h3 class="tip-title">O título parece exagerado demais?</h3>
+                        <p class="tip-text">
+                            Manchetes em CAIXA ALTA, com vários pontos de exclamação!!!,
+                            promessas absurdas ou apelos emocionais ("VOCÊ NÃO VAI ACREDITAR")
+                            são <strong>sinais clássicos</strong> de clickbait ou fake news.
+                            Notícia séria não precisa gritar.
+                        </p>
+                        <span class="tip-action">→ Desconfie de manchetes sensacionalistas</span>
+                    </div>
+                </div>
+
+                <div class="tip-row">
+                    <span class="tip-num">05</span>
+                    <div class="tip-content">
+                        <h3 class="tip-title">A imagem é real e do contexto certo?</h3>
+                        <p class="tip-text">
+                            Use a <strong>busca reversa de imagens</strong> do Google (basta
+                            arrastar a foto para o Google Imagens). Você descobre se aquela foto
+                            já apareceu antes — talvez seja antiga, ou de outro lugar do mundo.
+                        </p>
+                        <span class="tip-action">→ Faça busca reversa no Google Imagens</span>
+                    </div>
+                </div>
+
+                <div class="tip-row">
+                    <span class="tip-num">06</span>
+                    <div class="tip-content">
+                        <h3 class="tip-title">Existe um autor identificado?</h3>
+                        <p class="tip-text">
+                            Notícias verdadeiras têm <strong>autor com nome</strong>, perfil,
+                            histórico de outras matérias. Quando você não consegue saber quem
+                            escreveu, ou o "autor" é só um nome genérico, é um sinal vermelho.
+                        </p>
+                        <span class="tip-action">→ Procure pelo autor da matéria</span>
+                    </div>
+                </div>
+
+                <div class="tip-row">
+                    <span class="tip-num">07</span>
+                    <div class="tip-content">
+                        <h3 class="tip-title">Existem fontes citadas?</h3>
+                        <p class="tip-text">
+                            Boas reportagens citam <strong>especialistas, documentos, estudos</strong>
+                            com nome. Frases como "cientistas dizem", "segundo especialistas" sem
+                            nome ou link são vagas demais. Verdade tem CPF, mentira fica no genérico.
+                        </p>
+                        <span class="tip-action">→ Busque por nomes e fontes específicas</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sites de Checagem -->
+    <section class="section section-resources">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <span class="section-eyebrow">RECURSOS</span>
+                <h2 class="section-title">Onde <em>checar</em> uma notícia?</h2>
+            </div>
+
+            <p class="resources-intro">
+                Estes são sites e iniciativas brasileiras especializadas em verificar fatos.
+                Quando bater a dúvida, vale consultar:
+            </p>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <span class="resource-tag">FACT-CHECKING</span>
+                    <h3>Agência Lupa</h3>
+                    <p>Primeira agência de checagem de fatos do Brasil.</p>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-tag">FACT-CHECKING</span>
+                    <h3>Aos Fatos</h3>
+                    <p>Verificação de declarações de políticos e notícias virais.</p>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-tag">FACT-CHECKING</span>
+                    <h3>Comprova</h3>
+                    <p>Coalizão de veículos brasileiros para combater desinformação.</p>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-tag">FACT-CHECKING</span>
+                    <h3>Estadão Verifica</h3>
+                    <p>Núcleo de checagem do jornal O Estado de S. Paulo.</p>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-tag">IMAGEM</span>
+                    <h3>Google Imagens</h3>
+                    <p>Busca reversa para descobrir a origem real de uma foto.</p>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-tag">IMAGEM</span>
+                    <h3>TinEye</h3>
+                    <p>Outra ferramenta gratuita de busca reversa de imagens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">⚠</span>
+                <div>
+                    <strong>Alerta Digital</strong>
+                    <p>Portal educativo • Projeto escolar 2026</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="tipos.html">Tipos</a>
+                <a href="identificar.html">Como Identificar</a>
+                <a href="exemplos.html">Exemplos</a>
+                <a href="quiz.html">Quiz</a>
+            </nav>
+            <p class="footer-credit">
+                Feito com HTML, CSS e JavaScript •
+                <em>"A verdade dá trabalho, a mentira é gratuita."</em>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

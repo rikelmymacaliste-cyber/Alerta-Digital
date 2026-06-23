@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+    Portal Alerta Digital - Quiz Interativo
+    10 perguntas com pontuação e feedback
+-->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo — Alerta Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="status-bar">
+        <span class="status-dot"></span>
+        <span class="status-text">SISTEMA ATIVO</span>
+        <span class="status-divider">//</span>
+        <span class="status-text" id="current-date"></span>
+        <span class="status-divider">//</span>
+        <span class="status-text">SEÇÃO 06 / QUIZ</span>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">⚠</span>
+                <span class="logo-text">
+                    <span class="logo-title">Alerta Digital</span>
+                    <span class="logo-sub">portal contra fake news</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tipos.html" class="nav-link">Tipos</a>
+                <a href="identificar.html" class="nav-link">Como Identificar</a>
+                <a href="exemplos.html" class="nav-link">Exemplos</a>
+                <a href="ia.html" class="nav-link">IA</a>
+                <a href="quiz.html" class="nav-link active nav-cta">Quiz</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Quiz Container -->
+    <section class="quiz-section">
+        <div class="container">
+
+            <!-- TELA INICIAL -->
+            <div class="quiz-screen quiz-intro" id="quizIntro">
+                <div class="quiz-intro-content">
+                    <div class="page-hero-meta">
+                        <span class="page-num">06</span>
+                        <span class="page-eyebrow">QUIZ INTERATIVO</span>
+                    </div>
+                    <h1 class="page-title">
+                        Você consegue<br>
+                        diferenciar <em>verdade</em><br>
+                        de <em>mentira</em>?
+                    </h1>
+                    <p class="page-lead">
+                        Vamos descobrir. São <strong>10 perguntas</strong> sobre fake news,
+                        técnicas de verificação e situações reais. Ao final, você recebe sua
+                        pontuação e um diagnóstico personalizado.
+                    </p>
+
+                    <div class="quiz-meta-grid">
+                        <div class="quiz-meta-item">
+                            <span class="meta-num">10</span>
+                            <span class="meta-label">perguntas</span>
+                        </div>
+                        <div class="quiz-meta-item">
+                            <span class="meta-num">~5</span>
+                            <span class="meta-label">minutos</span>
+                        </div>
+                        <div class="quiz-meta-item">
+                            <span class="meta-num">∞</span>
+                            <span class="meta-label">tentativas</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-large" id="startQuizBtn">
+                        Começar Quiz <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- TELA DE PERGUNTAS -->
+            <div class="quiz-screen quiz-questions" id="quizQuestions" hidden>
+                <div class="quiz-progress">
+                    <div class="progress-info">
+                        <span class="progress-label">PERGUNTA</span>
+                        <span class="progress-current" id="currentQ">1</span>
+                        <span class="progress-divider">/</span>
+                        <span class="progress-total" id="totalQ">10</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-score">
+                        <span>ACERTOS:</span>
+                        <span class="score-num" id="liveScore">0</span>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <span class="question-tag" id="questionTag">CATEGORIA</span>
+                    <h2 class="question-text" id="questionText">Pergunta aqui</h2>
+                    <div class="answers-list" id="answersList">
+                        <!-- Respostas geradas via JS -->
+                    </div>
+                    <div class="feedback-box" id="feedbackBox" hidden>
+                        <span class="feedback-status" id="feedbackStatus"></span>
+                        <p class="feedback-text" id="feedbackText"></p>
+                        <button class="btn btn-primary" id="nextBtn">
+                            Próxima <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TELA DE RESULTADO -->
+            <div class="quiz-screen quiz-result" id="quizResult" hidden>
+                <div class="result-content">
+                    <span class="result-eyebrow" id="resultEyebrow">RESULTADO FINAL</span>
+                    <div class="result-score-display">
+                        <span class="result-score" id="resultScore">0</span>
+                        <span class="result-divider">/</span>
+                        <span class="result-total">10</span>
+                    </div>
+                    <h2 class="result-title" id="resultTitle">Título do resultado</h2>
+                    <p class="result-text" id="resultText">Texto do resultado</p>
+
+                    <div class="result-meter">
+                        <div class="result-meter-fill" id="resultMeterFill"></div>
+                        <div class="result-meter-labels">
+                            <span>Iniciante</span>
+                            <span>Intermediário</span>
+                            <span>Caçador</span>
+                        </div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button class="btn btn-primary" id="restartBtn">
+                            Tentar de novo <span class="btn-arrow">↻</span>
+                        </button>
+                        <a href="identificar.html" class="btn btn-ghost">
+                            Estudar mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">⚠</span>
+                <div>
+                    <strong>Alerta Digital</strong>
+                    <p>Portal educativo • Projeto escolar 2026</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="tipos.html">Tipos</a>
+                <a href="identificar.html">Como Identificar</a>
+                <a href="exemplos.html">Exemplos</a>
+                <a href="quiz.html">Quiz</a>
+            </nav>
+            <p class="footer-credit">
+                Feito com HTML, CSS e JavaScript •
+                <em>"A verdade dá trabalho, a mentira é gratuita."</em>
+            </p>
+        </div>
+    </footer>
+
+    <script src="quiz.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

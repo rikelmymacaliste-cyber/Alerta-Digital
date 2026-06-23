@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--
+    Portal Alerta Digital - Exemplos Reais
+    Casos didáticos comparando notícias falsas e verdadeiras
+-->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Reais — Alerta Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="status-bar">
+        <span class="status-dot"></span>
+        <span class="status-text">SISTEMA ATIVO</span>
+        <span class="status-divider">//</span>
+        <span class="status-text" id="current-date"></span>
+        <span class="status-divider">//</span>
+        <span class="status-text">SEÇÃO 04 / CASOS</span>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">⚠</span>
+                <span class="logo-text">
+                    <span class="logo-title">Alerta Digital</span>
+                    <span class="logo-sub">portal contra fake news</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tipos.html" class="nav-link">Tipos</a>
+                <a href="identificar.html" class="nav-link">Como Identificar</a>
+                <a href="exemplos.html" class="nav-link active">Exemplos</a>
+                <a href="ia.html" class="nav-link">IA</a>
+                <a href="quiz.html" class="nav-link nav-cta">Quiz</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-meta">
+                <span class="page-num">04</span>
+                <span class="page-eyebrow">CASOS DIDÁTICOS</span>
+            </div>
+            <h1 class="page-title">
+                Lado a lado:<br>
+                <em>fake</em> versus<br>
+                <em>verdade</em>.
+            </h1>
+            <p class="page-lead">
+                Os exemplos abaixo são <strong>fictícios</strong>, criados para fins educativos.
+                Eles imitam padrões reais de fake news que circulam todo dia. Veja como detectar
+                cada uma comparando com a versão verdadeira.
+            </p>
+        </div>
+    </section>
+
+    <!-- Exemplos -->
+    <section class="section section-examples">
+        <div class="container">
+
+            <!-- Caso 01 -->
+            <div class="example-case">
+                <div class="case-header">
+                    <span class="case-num">CASO 01</span>
+                    <span class="case-tag">SAÚDE</span>
+                </div>
+                <h2 class="case-title">Cura milagrosa? Provavelmente <em>não</em>.</h2>
+
+                <div class="case-comparison">
+                    <article class="news-card news-fake">
+                        <div class="news-stamp">FALSA</div>
+                        <span class="news-source">📰 saudeincrivel.blog</span>
+                        <h3 class="news-headline">
+                            CIENTISTAS DESCOBREM: SUCO DE LIMÃO COM BICARBONATO CURA CÂNCER
+                            EM 7 DIAS! Médicos NÃO QUEREM que você saiba!
+                        </h3>
+                        <p class="news-body">
+                            Uma descoberta CHOCANTE foi escondida pela indústria farmacêutica!
+                            Estudo revolucionário (sem autor identificado) prova que beber a
+                            mistura todas as manhãs elimina tumores. COMPARTILHE antes que
+                            apaguem!!!
+                        </p>
+                        <div class="news-redflags">
+                            <span class="flag-title">⚠ SINAIS DE FAKE:</span>
+                            <ul>
+                                <li>Site desconhecido com domínio "blog"</li>
+                                <li>Tudo em CAIXA ALTA com vários pontos de exclamação</li>
+                                <li>Promessa absurda (curar câncer em 7 dias)</li>
+                                <li>Teoria conspiratória ("médicos escondem")</li>
+                                <li>Sem autor, sem fontes, sem estudos linkados</li>
+                                <li>Pressão para compartilhar rápido</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="news-card news-real">
+                        <div class="news-stamp">VERDADEIRA</div>
+                        <span class="news-source">📰 G1 Saúde</span>
+                        <h3 class="news-headline">
+                            Estudo da USP investiga propriedades antioxidantes do limão em
+                            tratamentos complementares
+                        </h3>
+                        <p class="news-body">
+                            Pesquisadores da Universidade de São Paulo, em estudo publicado na
+                            revista <em>Brazilian Journal of Medical Research</em>, identificaram
+                            compostos no limão com potencial antioxidante. <strong>Os autores
+                                ressaltam que não substituem tratamentos oncológicos.</strong>
+                        </p>
+                        <div class="news-greenflags">
+                            <span class="flag-title">✓ SINAIS DE CONFIÁVEL:</span>
+                            <ul>
+                                <li>Veículo conhecido (G1)</li>
+                                <li>Título sóbrio, sem promessas absurdas</li>
+                                <li>Fonte identificada (USP)</li>
+                                <li>Publicação científica nominada</li>
+                                <li>Inclui ressalva dos próprios pesquisadores</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Caso 02 -->
+            <div class="example-case">
+                <div class="case-header">
+                    <span class="case-num">CASO 02</span>
+                    <span class="case-tag">IMAGEM FORA DE CONTEXTO</span>
+                </div>
+                <h2 class="case-title">A foto é real, o <em>contexto</em> é mentira.</h2>
+
+                <div class="case-comparison">
+                    <article class="news-card news-fake">
+                        <div class="news-stamp">FALSA</div>
+                        <span class="news-source">📱 Mensagem em grupo de WhatsApp</span>
+                        <h3 class="news-headline">
+                            URGENTE: Multidão em protesto MASSIVO em São Paulo HOJE!!
+                            Mídia esconde!
+                        </h3>
+                        <p class="news-body">
+                            "Olha o tamanho do protesto que está acontecendo agora na Av. Paulista!
+                            A imprensa não mostra! Compartilhem para todos verem a verdade que
+                            estão escondendo!"
+                        </p>
+                        <div class="news-redflags">
+                            <span class="flag-title">⚠ SINAIS DE FAKE:</span>
+                            <ul>
+                                <li>Foto sem data, hora ou referência</li>
+                                <li>Compartilhada sem fonte original</li>
+                                <li>Apelo emocional ("imprensa esconde")</li>
+                                <li>Busca reversa revelaria: imagem é do Egito, 2011</li>
+                                <li>Pressão para compartilhar imediatamente</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="news-card news-real">
+                        <div class="news-stamp">VERDADEIRA</div>
+                        <span class="news-source">📰 Folha de S.Paulo</span>
+                        <h3 class="news-headline">
+                            Manifestação reúne 12 mil pessoas na Av. Paulista, segundo Polícia Militar
+                        </h3>
+                        <p class="news-body">
+                            O ato realizado neste domingo (15) reuniu 12 mil pessoas, conforme
+                            dados da PM. A organização estimou 30 mil. As imagens, capturadas
+                            por fotógrafos da Folha, mostram a concentração entre o MASP e a Rua
+                            Augusta às 14h.
+                        </p>
+                        <div class="news-greenflags">
+                            <span class="flag-title">✓ SINAIS DE CONFIÁVEL:</span>
+                            <ul>
+                                <li>Veículo identificado e fotógrafos creditados</li>
+                                <li>Data e hora específicas</li>
+                                <li>Localização exata mencionada</li>
+                                <li>Dois lados da estimativa (PM e organização)</li>
+                                <li>Imagem com contexto verificável</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Caso 03 -->
+            <div class="example-case">
+                <div class="case-header">
+                    <span class="case-num">CASO 03</span>
+                    <span class="case-tag">CLICKBAIT</span>
+                </div>
+                <h2 class="case-title">O título promete uma <em>bomba</em>. O conteúdo é nada.</h2>
+
+                <div class="case-comparison">
+                    <article class="news-card news-fake">
+                        <div class="news-stamp">FALSA</div>
+                        <span class="news-source">📰 chocantenoticias.net</span>
+                        <h3 class="news-headline">
+                            ATOR FAMOSO MORRE em ACIDENTE TERRÍVEL! Você NÃO VAI ACREDITAR
+                            no que aconteceu!
+                        </h3>
+                        <p class="news-body">
+                            "Ator famoso" passou por momento difícil esta semana. Tropeçou na
+                            calçada e quase caiu. <strong>"Morreu de vergonha"</strong> ao ver
+                            o vídeo viralizar. Confira as fotos do "acidente"...
+                        </p>
+                        <div class="news-redflags">
+                            <span class="flag-title">⚠ SINAIS DE FAKE:</span>
+                            <ul>
+                                <li>Título promete morte, conteúdo é tropeção</li>
+                                <li>Uso enganoso da palavra "morreu" (de vergonha)</li>
+                                <li>Site sem credibilidade</li>
+                                <li>Não cita o nome do ator no título</li>
+                                <li>Joga com o duplo sentido para gerar cliques</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="news-card news-real">
+                        <div class="news-stamp">VERDADEIRA</div>
+                        <span class="news-source">📰 UOL Entretenimento</span>
+                        <h3 class="news-headline">
+                            Ator [Nome do Ator] passa por situação engraçada em premiação;
+                            assista ao vídeo
+                        </h3>
+                        <p class="news-body">
+                            Durante a cerimônia do prêmio X, o ator tropeçou ao subir ao palco
+                            para receber sua estatueta, mas se recuperou rapidamente entre
+                            risadas do público. "Foi o momento mais divertido da noite",
+                            comentou em entrevista posterior.
+                        </p>
+                        <div class="news-greenflags">
+                            <span class="flag-title">✓ SINAIS DE CONFIÁVEL:</span>
+                            <ul>
+                                <li>Título descreve fielmente o conteúdo</li>
+                                <li>Veículo conhecido (UOL)</li>
+                                <li>Nome do ator identificado</li>
+                                <li>Inclui declaração do próprio envolvido</li>
+                                <li>Tom proporcional ao fato</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Botão Quiz -->
+            <div class="examples-cta">
+                <h3>Conseguiu pegar os padrões?</h3>
+                <p>Agora teste seu olhar treinado no quiz interativo.</p>
+                <a href="quiz.html" class="btn btn-primary btn-large">
+                    Ir para o Quiz <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">⚠</span>
+                <div>
+                    <strong>Alerta Digital</strong>
+                    <p>Portal educativo • Projeto escolar 2026</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="tipos.html">Tipos</a>
+                <a href="identificar.html">Como Identificar</a>
+                <a href="exemplos.html">Exemplos</a>
+                <a href="quiz.html">Quiz</a>
+            </nav>
+            <p class="footer-credit">
+                Feito com HTML, CSS e JavaScript •
+                <em>"A verdade dá trabalho, a mentira é gratuita."</em>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

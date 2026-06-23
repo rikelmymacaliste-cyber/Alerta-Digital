@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório: Mídias Manipuladas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="status-bar">
+        <span class="status-dot"></span>
+        <span class="status-text">SISTEMA ATIVO</span>
+        <span class="status-divider">//</span>
+        <span class="status-text" id="current-date"></span>
+        <span class="status-divider">//</span>
+        <span class="status-text">DOSSIÊ TÉCNICO</span>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">⚠</span>
+                <span class="logo-text">
+                    <span class="logo-title">Alerta Digital</span>
+                    <span class="logo-sub">portal contra fake news</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tipos.html" class="nav-link">Tipos</a>
+                <a href="identificar.html" class="nav-link active">Como Identificar</a>
+                <a href="exemplos.html" class="nav-link">Exemplos</a>
+                <a href="ia.html" class="nav-link">IA</a>
+                <a href="quiz.html" class="nav-link nav-cta">Quiz</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <div class="container">
+
+            <div class="page-num">
+                <a href="tipos.html" class="btn btn-ghost">
+                    <span class="btn-arrow"
+                        style="transform: rotate(180deg); display: inline-block; margin-right: 8px;">→</span>
+                    Voltar para Tipos
+                </a>
+            </div>
+
+            <section class="page-hero">
+                <div class="container">
+                    <h1 class="page-title">
+                        Mídias Manipuladas:<br>
+                        <span class="hero-title-emphasis" style="color: var(--color-alert);">A Ameaça Tecnológica das
+                            Deepfakes</span>
+                    </h1>
+                    <p class="class-lead">
+                        Uma investigação técnica sobre como o avanço de algoritmos generativos e clonadores de voz
+                        permitiram adulterações audiovisuais indetectáveis.
+                    </p>
+                </div>
+            </section>
+
+            <div class="article-content definition-text"
+                style="color: var(--text-primary); font-size: 1.1rem; line-height: 1.8;">
+
+                <p class="type-desc">
+                    As <em style="color: var(--color-amber);">Mídias Manipuladas</em> elevaram o ecossistema de fake
+                    news a uma escala alarmante.
+                    Se antes a desinformação dependia de montagens visíveis no Photoshop ou de distorções de texto, os
+                    criminosos digitais agora fazem uso de redes neurais artificiais para sintetizar rostos, simular
+                    expressões humanas milimetricamente precisas e replicar a entonação de voz exata de autoridades
+                    públicas.
+                </p>
+
+                <div class="definition-card article-case-card"
+                    style="margin: 3.5rem 0; text-align: left; max-width: 100%;">
+                    <div class="card-corner card-corner-tl"></div>
+                    <div class="card-corner card-corner-tr"></div>
+                    <div class="card-corner card-corner-bl"></div>
+                    <div class="card-corner card-corner-br"></div>
+
+                    <span class="card-label">CASO ANALISADO</span>
+
+
+                    <h3 class="case-title">
+                        🧠 O Falso Confisco Bancário</h3>
+
+                    <div class="case-sections">
+                        <div class="case-block">
+                            <h4
+                                style="font-family: var(--font-mono);  color: var(--color-amber); text-transform: uppercase; margin-bottom: 0.4rem;">
+                                A Narrativa Viral</h4>
+                            <p class="type-desc">
+                                Um vídeo compartilhado no WhatsApp exibia um pronunciamento oficial em cadeia de rádio e
+                                TV no qual um líder político decretava o bloqueio imediato e compulsório de activos
+                                financeiros e poupanças privadas a partir da meia-noite daquele dia.
+                            </p>
+                        </div>
+
+                        <div class="case-block block-success">
+                            <h4
+                                style="font-family: var(--font-mono); color: var(--color-truth); text-transform: uppercase; margin-bottom: 0.4rem;">
+                                A Investigação dos Fatos</h4>
+                            <p class="type-desc">
+                                O vídeo era uma fraude tecnológica. Os criminosos capturaram uma entrevista antiga da
+                                autoridade, aplicaram um modelo de inteligência artificial generativa focado em
+                                mapeamento labial para adequar a boca às novas palavras falsas, e usaram amostras curtas
+                                de áudios reais para clonar o tom e o ritmo de fala. O objetivo era causar uma corrida
+                                bancária e desestabilizar o sistema financeiro.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="article-subtitle">
+                    Rastros técnicos para mapear vídeos forjados por IA</h2>
+
+                <div class="impact-list article-impacts">
+                    <div class="impact-item">
+                        <span class="impact-icon">🔍</span>
+                        <div class="impact-content">
+                            <h3 class="case-title">
+                                Inconsistência ocular e reflexos</h3>
+                            <p class="type-desc">
+                                Muitos modelos de IA falham na renderização interna dos olhos. Verifique se o reflexo
+                                das luzes nos olhos acompanha o movimento da cabeça ou se o indivíduo passa muito tempo
+                                sem piscar de forma natural.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-icon">✍</span>
+                        <div class="impact-content">
+                            <h3 class="case-title"> Artefatos nos cantos da mandíbula</h3>
+                            <p class="type-desc">
+                                Movimentos bruscos de cabeça costumam gerar distorções temporárias (borrões, texturas
+                                duplas ou sombras flutuantes) na linha que divide o queixo do pescoço.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">⚠</span>
+                <div>
+                    <strong>Alerta Digital</strong>
+                    <p>Portal educativo • Projeto escolar 2026</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="tipos.html">Tipos</a>
+                <a href="identificar.html">Como Identificar</a>
+                <a href="exemplos.html">Exemplos</a>
+                <a href="quiz.html">Quiz</a>
+            </nav>
+            <p class="footer-credit">
+                Feito com HTML, CSS e JavaScript •
+                <em>"A verdade dá trabalho, a mentira é gratuita."</em>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

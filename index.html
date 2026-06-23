@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal educativo sobre Fake News - Aprenda a identificar desinformação">
+    <title>Alerta Digital — Combatendo as Fake News</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de status superior (estilo terminal/alerta) -->
+    <div class="status-bar">
+        <span class="status-dot"></span>
+        <span class="status-text">SISTEMA ATIVO</span>
+        <span class="status-divider">//</span>
+        <span class="status-text" id="current-date"></span>
+        <span class="status-divider">//</span>
+        <span class="status-text">EDIÇÃO #001</span>
+    </div>
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">⚠</span>
+                <span class="logo-text">
+                    <span class="logo-title">Alerta Digital</span>
+                    <span class="logo-sub">portal contra fake news</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="tipos.html" class="nav-link">Tipos</a>
+                <a href="identificar.html" class="nav-link">Como Identificar</a>
+                <a href="exemplos.html" class="nav-link">Exemplos</a>
+                <a href="ia.html" class="nav-link">IA</a>
+                <a href="quiz.html" class="nav-link nav-cta">Quiz</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO / Banner Principal -->
+    <section class="hero">
+        <div class="hero-grid-overlay"></div>
+        <div class="container hero-inner">
+            <div class="hero-meta">
+                <span class="hero-tag">[ EDIÇÃO ESPECIAL ]</span>
+                <span class="hero-tag-line"></span>
+                <span class="hero-tag-sub">desinformação em pauta</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-line"><em>Nem</em> tudo</span>
+                <span class="hero-title-line">que você lê</span>
+                <span class="hero-title-line hero-title-emphasis">é <span class="redacted">verdade</span>.</span>
+            </h1>
+
+            <p class="hero-lead">
+                Toda hora, milhões de notícias falsas circulam pela internet. Algumas são bobagem,
+                outras destroem reputações, influenciam eleições e colocam vidas em risco.
+                Este portal foi feito para te ensinar a <strong>desconfiar</strong>,
+                <strong>verificar</strong> e <strong>pensar criticamente</strong>.
+            </p>
+
+            <div class="hero-actions">
+                <a href="quiz.html" class="btn btn-primary">
+                    Testar meu conhecimento
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="#sobre" class="btn btn-ghost">O que são fake news?</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="86">0</span><span class="stat-percent">%</span>
+                    <span class="stat-label">dos brasileiros já acreditaram em uma fake news</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="6">0</span><span class="stat-suffix">x</span>
+                    <span class="stat-label">notícias falsas se espalham mais rápido que verdadeiras</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span><span class="stat-suffix"> bi</span>
+                    <span class="stat-label">de pessoas expostas à desinformação online no mundo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: O que são Fake News -->
+    <section class="section section-light" id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <span class="section-eyebrow">DEFINIÇÃO</span>
+                <h2 class="section-title">O que são <em>Fake News</em>?</h2>
+            </div>
+
+            <div class="definition-grid">
+                <div class="definition-text">
+                    <p class="lead-paragraph">
+                        <strong>Fake News</strong> (notícias falsas, em inglês) são informações
+                        criadas para parecerem notícias verdadeiras, mas que foram inventadas,
+                        manipuladas ou tiradas de contexto.
+                    </p>
+                    <p>
+                        Elas existem por vários motivos: ganhar cliques e dinheiro, prejudicar
+                        alguém, manipular opiniões políticas, vender produtos duvidosos ou
+                        simplesmente fazer brincadeira de mau gosto.
+                    </p>
+                    <p>
+                        O problema é que, quando uma notícia falsa viraliza, ela pode causar
+                        <strong>danos reais</strong>: pessoas inocentes acusadas, decisões erradas
+                        baseadas em mentiras, e até violência motivada por boatos.
+                    </p>
+                </div>
+
+                <div class="definition-card">
+                    <div class="card-corner card-corner-tl"></div>
+                    <div class="card-corner card-corner-tr"></div>
+                    <div class="card-corner card-corner-bl"></div>
+                    <div class="card-corner card-corner-br"></div>
+                    <span class="card-label">EM INGLÊS</span>
+                    <p class="card-quote">
+                        “Fake news is false or misleading information presented as legitimate news,
+                        often spread to influence opinions or cause harm.”
+                    </p>
+                    <span class="card-author">— Cambridge Dictionary</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Cards de Exploração -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <span class="section-eyebrow">EXPLORE</span>
+                <h2 class="section-title">Por onde <em>começar</em>?</h2>
+            </div>
+
+            <div class="explore-grid">
+                <a href="tipos.html" class="explore-card">
+                    <span class="explore-card-num">→ 01</span>
+                    <h3 class="explore-card-title">Tipos de Fake News</h3>
+                    <p class="explore-card-desc">
+                        Conheça as 5 categorias principais de desinformação que circulam
+                        diariamente nas redes.
+                    </p>
+                    <span class="explore-card-cta">Ver tipos</span>
+                </a>
+
+                <a href="identificar.html" class="explore-card">
+                    <span class="explore-card-num">→ 02</span>
+                    <h3 class="explore-card-title">Como Identificar</h3>
+                    <p class="explore-card-desc">
+                        Um guia prático com 7 dicas para verificar se uma notícia é confiável
+                        antes de compartilhar.
+                    </p>
+                    <span class="explore-card-cta">Ver guia</span>
+                </a>
+
+                <a href="exemplos.html" class="explore-card">
+                    <span class="explore-card-num">→ 03</span>
+                    <h3 class="explore-card-title">Exemplos Reais</h3>
+                    <p class="explore-card-desc">
+                        Casos didáticos com explicação do porquê são falsos e o que poderia
+                        ter sido verificado.
+                    </p>
+                    <span class="explore-card-cta">Ver exemplos</span>
+                </a>
+
+                <a href="quiz.html" class="explore-card explore-card-highlight">
+                    <span class="explore-card-num">→ 04</span>
+                    <h3 class="explore-card-title">Quiz Interativo</h3>
+                    <p class="explore-card-desc">
+                        Teste seus conhecimentos com 10 perguntas e descubra se você
+                        sabe distinguir verdade de mentira.
+                    </p>
+                    <span class="explore-card-cta">Começar agora</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Impactos -->
+    <section class="section section-impact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <span class="section-eyebrow">IMPACTO</span>
+                <h2 class="section-title">Por que <em>importa</em>?</h2>
+            </div>
+
+            <div class="impact-list">
+                <div class="impact-item">
+                    <span class="impact-icon">⚡</span>
+                    <div class="impact-content">
+                        <h3>Saúde pública em risco</h3>
+                        <p>Boatos sobre vacinas, tratamentos milagrosos e curas falsas já levaram
+                            pessoas à morte por seguirem orientações sem comprovação científica.</p>
+                    </div>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-icon">⚡</span>
+                    <div class="impact-content">
+                        <h3>Democracia abalada</h3>
+                        <p>Eleições em diversos países foram influenciadas por campanhas
+                            coordenadas de desinformação, distorcendo o debate público.</p>
+                    </div>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-icon">⚡</span>
+                    <div class="impact-content">
+                        <h3>Violência real por causa de mentira</h3>
+                        <p>Pessoas inocentes já foram linchadas após boatos espalhados em grupos
+                            de mensagens. Mentira na tela vira ódio na rua.</p>
+                    </div>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-icon">⚡</span>
+                    <div class="impact-content">
+                        <h3>Confiança em colapso</h3>
+                        <p>Quando ninguém sabe mais no que acreditar, até informações verdadeiras
+                            passam a ser ignoradas. A desconfiança vira regra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container cta-inner">
+            <span class="cta-eyebrow">SEU PRÓXIMO PASSO</span>
+            <h2 class="cta-title">Pronto para virar um <em>caçador</em> de fake news?</h2>
+            <p class="cta-text">
+                Faça o quiz interativo e descubra o quão bem você consegue separar
+                fato de ficção. São apenas 10 perguntas.
+            </p>
+            <a href="quiz.html" class="btn btn-primary btn-large">
+                Iniciar Quiz <span class="btn-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">⚠</span>
+                <div>
+                    <strong>Alerta Digital</strong>
+                    <p>Portal educativo • Projeto escolar 2026</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="tipos.html">Tipos</a>
+                <a href="identificar.html">Como Identificar</a>
+                <a href="exemplos.html">Exemplos</a>
+                <a href="quiz.html">Quiz</a>
+            </nav>
+            <p class="footer-credit">
+                Feito com HTML, CSS e JavaScript •
+                <em>"A verdade dá trabalho, a mentira é gratuita."</em>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
